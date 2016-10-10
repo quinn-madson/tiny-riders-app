@@ -1,4 +1,12 @@
 {
   "name": "tiny2",
-  "app_id": ""
+  "app_id": "675aca4a",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

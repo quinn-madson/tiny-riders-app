@@ -5,7 +5,7 @@
             <a class="button" ng-click="setMode('past')">Past</a>
         </div>
         <ion-list>
-            <ion-item class="item-icon-right item-text-wrap col" ng-repeat="event in events" ng-href="#/app/scheduleDetails">
+            <ion-item class="item-icon-right item-text-wrap col" ng-repeat="event in events" ng-click="nav(event)">
                 <div class="title">{{event.summary}}</div>
                 <div class="date">{{event.start.dateTime | fromNow}}</div>
                 <div class="location">{{event.location}}</div>

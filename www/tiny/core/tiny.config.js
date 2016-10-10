@@ -24,7 +24,7 @@
             .state('app.scheduleDetails', {
                 url: '/scheduleDetails?event',
                 views: {
-                    'main': {
+                    'menuContent': {
                         templateUrl: 'tiny/schedule/scheduleDetails.html',
                         controller: 'ScheduleDetailsController'
                     }
@@ -58,6 +58,6 @@
                 }
             });
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/app/lmp');
+        $urlRouterProvider.otherwise('/app/schedule');
     };
 })();

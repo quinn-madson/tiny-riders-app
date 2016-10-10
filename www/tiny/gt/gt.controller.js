@@ -17,7 +17,7 @@
                         type: 'bar',
                         // marginTop: '10px'
                     },
-                    colors: ['#058dc7', '#50b432'],
+                    colors: ['#ffc100', '#ffc100'],
                 },
                 series: [{
                     data: results,

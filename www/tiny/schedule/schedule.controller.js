@@ -44,7 +44,7 @@
         }
 
         function nav(ev) {
-            console.log("ev", ev);
+            console.log("nav exec: ev", ev);
             scheduleService.selectedItem = ev;
             $state.go('app.scheduleDetails');
         }

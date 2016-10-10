@@ -1,8 +1,5 @@
-/* Empty. Add your own CSS if you like */
-
-
-.centerfont{
-  display: -webkit-box;
+.centerfont {
+    display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -31,7 +28,21 @@
     -ms-flex-align: center;
     align-items: center;
     font-size: 35px;
-    
-    
 }
 
+.list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+    text-indent: 50px;
+}
+
+.list .item.item-accordion.ng-hide {
+    line-height: 0px;
+}
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+}
