@@ -1,0 +1,17 @@
+<ion-view title="Schedule">
+    <ion-content>
+        <div class="button-bar">
+            <a class="button" ng-click="setMode('future')">Upcoming</a>
+            <a class="button" ng-click="setMode('past')">Past</a>
+        </div>
+        <ion-list>
+            <ion-item class="item-icon-right item-text-wrap col" ng-repeat="event in events" ng-href="#/app/scheduleDetails">
+                <div class="title">{{event.summary}}</div>
+                <div class="date">{{event.start.dateTime | fromNow}}</div>
+                <div class="location">{{event.location}}</div>
+                <!-- <div class="description">{{event.description}}</div> -->
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
