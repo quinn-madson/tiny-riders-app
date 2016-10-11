@@ -31,7 +31,7 @@
                 }
             })
             .state('app.lmp', {
-                url: '/lmp',
+                url: '/lmp/:googleDocId',
                 views: {
                     'menuContent': {
                         templateUrl: 'tiny/lmp/lmp.html',
@@ -40,7 +40,7 @@
                 }
             })
             .state('app.gt', {
-                url: '/gt',
+                url: '/gt/:googleDocId',
                 views: {
                     'menuContent': {
                         templateUrl: 'tiny/gt/gt.html',
@@ -49,7 +49,7 @@
                 }
             })
             .state('app.club', {
-                url: '/club',
+                url: '/club/:googleDocId/:className',
                 views: {
                     'menuContent': {
                         templateUrl: 'tiny/club/club.html',

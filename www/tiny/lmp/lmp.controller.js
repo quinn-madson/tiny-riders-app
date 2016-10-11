@@ -3,11 +3,11 @@
     angular
         .module('tiny')
         .controller('lmpController', lmpController);
-    lmpController.$inject = ['$scope', '$http', 'googleDriveService'];
+    lmpController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams'];
     /* @ngInject */
-    function lmpController($scope, $http, googleDriveService) {
+    function lmpController($scope, $http, googleDriveService, $stateParams) {
 
-        googleDriveService.getData('LMP').then(function(results) {
+        googleDriveService.getData($stateParams.googleDocId, 'LMP').then(function(results) {
             $scope.chartPie = {
                 size: {
                     height: 600

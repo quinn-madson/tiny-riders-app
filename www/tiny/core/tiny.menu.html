@@ -19,16 +19,29 @@
                 <ion-item menu-close href="#/app/schedule" class="item-balanced">
                     Schedule
                 </ion-item>
+                <ion-item class="item-balanced" ng-click="toggleGroup('schedule-10')" ng-class="{active: isGroupShown('schedule-10')}">
+                    <i class="icon" ng-class="isGroupShown('schedule-10') ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Season 10 Standings
+                </ion-item>
+                <ion-item menu-close href="#/app/lmp/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ" class="item-accordion item-assertive" ng-show="isGroupShown('schedule-10')">
+                    LMP
+                </ion-item>
+                <ion-item menu-close href="#/app/gt/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ" class="item-accordion item-energized" ng-show="isGroupShown('schedule-10')">
+                    GT
+                </ion-item>
+                <ion-item menu-close href="#/app/club/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ/Carrera%201&#58;24" class="item-accordion item-balanced" ng-show="isGroupShown('schedule-10')">
+                    Carrera 1:24
+                </ion-item>
+
                 <ion-item class="item-balanced" ng-click="toggleGroup('schedule-9')" ng-class="{active: isGroupShown('schedule-9')}">
                     <i class="icon" ng-class="isGroupShown('schedule-9') ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Season 9 Results
                 </ion-item>
-                <ion-item menu-close href="#/app/lmp" class="item-accordion item-assertive" ng-show="isGroupShown('schedule-9')">
+                <ion-item menu-close href="#/app/lmp/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8" class="item-accordion item-assertive" ng-show="isGroupShown('schedule-9')">
                     LMP
                 </ion-item>
-                <ion-item menu-close href="#/app/gt" class="item-accordion item-energized" ng-show="isGroupShown('schedule-9')">
+                <ion-item menu-close href="#/app/gt/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8" class="item-accordion item-energized" ng-show="isGroupShown('schedule-9')">
                     GT
                 </ion-item>
-                <ion-item menu-close href="#/app/club" class="item-accordion item-balanced" ng-show="isGroupShown('schedule-9')">
+                <ion-item menu-close href="#/app/club/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8/Club%20Cars" class="item-accordion item-balanced" ng-show="isGroupShown('schedule-9')">
                     Club Cars
                 </ion-item>
             </ion-list>

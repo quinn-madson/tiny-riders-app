@@ -3,11 +3,13 @@
     angular
         .module('tiny')
         .controller('gtController', gtController);
-    gtController.$inject = ['$scope', '$http', 'googleDriveService'];
+    gtController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams'];
     /* @ngInject */
-    function gtController($scope, $http, googleDriveService) {
+    function gtController($scope, $http, googleDriveService, $stateParams) {
 
-        googleDriveService.getData('GT').then(function(results) {
+        console.log("$stateParams", $stateParams);
+
+        googleDriveService.getData($stateParams.googleDocId, 'GT').then(function(results) {
             $scope.chartPie = {
                 size: {
                     height: 600

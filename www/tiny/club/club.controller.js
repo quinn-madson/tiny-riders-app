@@ -3,11 +3,13 @@
     angular
         .module('tiny')
         .controller('clubController', clubController);
-    clubController.$inject = ['$scope', '$http', 'googleDriveService'];
+    clubController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams'];
     /* @ngInject */
-    function clubController($scope, $http, googleDriveService) {
+    function clubController($scope, $http, googleDriveService, $stateParams) {
 
-        googleDriveService.getData('CLUB').then(function(results) {
+        $scope.className = $stateParams.className;
+
+        googleDriveService.getData($stateParams.googleDocId, 'CLUB').then(function(results) {
             $scope.chartPie = {
                 size: {
                     height: 600
@@ -45,7 +47,7 @@
                     }
                 },
                 title: {
-                    text: 'Club Cars'
+                    text: $stateParams.className
                 },
                 loading: false
             };

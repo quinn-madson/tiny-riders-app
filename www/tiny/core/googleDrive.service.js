@@ -19,9 +19,9 @@
             return 0;
         }
 
-        function getData(raceClass) {
+        function getData(googleDocId, raceClass) {
             var def = $q.defer();
-            $http.get('https://spreadsheets.google.com/feeds/list/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8/5/public/full?alt=json', {}).success(function(data) {
+            $http.get('https://spreadsheets.google.com/feeds/list/' + googleDocId + '/5/public/full?alt=json', {}).success(function(data) {
                 var results = [];
                 for (var i = 0; i < data.feed.entry.length; i++) {
                     if (data.feed.entry[i].title) {
