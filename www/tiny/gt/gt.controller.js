@@ -3,14 +3,31 @@
     angular
         .module('tiny')
         .controller('gtController', gtController);
-    gtController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams'];
+    gtController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams', 'utilitiesService'];
     /* @ngInject */
-    function gtController($scope, $http, googleDriveService, $stateParams) {
+    function gtController($scope, $http, googleDriveService, $stateParams, utilitiesService) {
+        // PROPERTIES
+        $scope.hideChart = true;
+        // BOOTSRTAP
+        init();
 
-        console.log("$stateParams", $stateParams);
+        // FUNCTIONS
+        function init() {
+            showLoading();
+        }
+
+        function showLoading() {
+            $scope.hideChart = true;
+            utilitiesService.showLoading();
+        }
+
+        function hideLoading() {
+            $scope.hideChart = false;
+            utilitiesService.hideLoading();
+        }
 
         googleDriveService.getData($stateParams.googleDocId, 'GT').then(function(results) {
-            $scope.chartPie = {
+            $scope.chartPie = { 
                 size: {
                     height: 600
                 },
@@ -51,6 +68,7 @@
                 },
                 loading: false
             };
+            hideLoading();
         });
     }
 })();

@@ -14,7 +14,6 @@
          * else, select the given group
          */
         $scope.toggleGroup = function(group) {
-        	console.log("group", group);
             if ($scope.isGroupShown(group)) {
                 $scope.shownGroup = null;
             } else {

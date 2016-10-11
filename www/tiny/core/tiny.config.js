@@ -30,6 +30,24 @@
                     }
                 }
             })
+            .state('app.posts', {
+                url: '/posts',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'tiny/posts/postsList.html',
+                        controller: 'PostsListController'
+                    }
+                }
+            })
+            .state('app.postDetails', {
+                url: '/postDetails?post',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'tiny/posts/postDetails.html',
+                        controller: 'PostDetailsController'
+                    }
+                }
+            })
             .state('app.lmp', {
                 url: '/lmp/:googleDocId',
                 views: {

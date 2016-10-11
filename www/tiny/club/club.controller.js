@@ -3,12 +3,30 @@
     angular
         .module('tiny')
         .controller('clubController', clubController);
-    clubController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams'];
+    clubController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams', 'utilitiesService'];
     /* @ngInject */
-    function clubController($scope, $http, googleDriveService, $stateParams) {
+    function clubController($scope, $http, googleDriveService, $stateParams, utilitiesService) {
 
+        // PROPERTIES
         $scope.className = $stateParams.className;
+        $scope.hideChart = true;
+        // BOOTSRTAP
+        init();
 
+        // FUNCTIONS
+        function init() {
+            showLoading();
+        }
+
+        function showLoading() {
+            $scope.hideChart = true;
+            utilitiesService.showLoading();
+        }
+
+        function hideLoading() {
+            $scope.hideChart = false;
+            utilitiesService.hideLoading();
+        }
         googleDriveService.getData($stateParams.googleDocId, 'CLUB').then(function(results) {
             $scope.chartPie = {
                 size: {
@@ -51,6 +69,7 @@
                 },
                 loading: false
             };
+            hideLoading();
         });
     }
 })();

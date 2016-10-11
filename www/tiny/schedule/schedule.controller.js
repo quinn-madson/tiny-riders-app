@@ -31,7 +31,6 @@
                 }
                 $scope.events = $scope.futureEvents;
                 $scope.pastEvents = $scope.pastEvents.reverse();
-                console.log("$scope.events", $scope.events);
             });
         }
 
@@ -44,7 +43,6 @@
         }
 
         function nav(ev) {
-            console.log("nav exec: ev", ev);
             scheduleService.selectedItem = ev;
             $state.go('app.scheduleDetails');
         }

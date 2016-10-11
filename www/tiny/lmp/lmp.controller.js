@@ -3,9 +3,28 @@
     angular
         .module('tiny')
         .controller('lmpController', lmpController);
-    lmpController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams'];
+    lmpController.$inject = ['$scope', '$http', 'googleDriveService', '$stateParams', 'utilitiesService'];
     /* @ngInject */
-    function lmpController($scope, $http, googleDriveService, $stateParams) {
+    function lmpController($scope, $http, googleDriveService, $stateParams, utilitiesService) {
+        // PROPERTIES
+        $scope.hideChart = true;
+        // BOOTSRTAP
+        init();
+
+        // FUNCTIONS
+        function init() {
+            showLoading();
+        }
+
+        function showLoading() {
+            $scope.hideChart = true;
+            utilitiesService.showLoading();
+        }
+
+        function hideLoading() {
+            $scope.hideChart = false;
+            utilitiesService.hideLoading();
+        }
 
         googleDriveService.getData($stateParams.googleDocId, 'LMP').then(function(results) {
             $scope.chartPie = {
@@ -49,6 +68,7 @@
                 },
                 loading: false
             };
+            hideLoading();
         });
     }
 })();

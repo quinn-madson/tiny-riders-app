@@ -13,7 +13,6 @@
         activate();
 
         function activate() {
-            console.log(scheduleService.selectedItem);
             $scope.event = scheduleService.selectedItem;
         }
     }

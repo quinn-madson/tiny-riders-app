@@ -1,0 +1,11 @@
+<ion-view title="Schedule">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-icon-right item-text-wrap col" ng-repeat="post in posts" ng-click="nav(post)">
+                <div class="title">{{post.title}}</div>
+                <div class="metainfo">{{post.date | toNow}} by {{post.author.name}}</div>
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

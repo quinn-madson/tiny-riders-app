@@ -2,11 +2,18 @@
     'use strict';
     var tiny = angular.module('tiny');
     tiny.filter('fromNow', fromNow);
+    tiny.filter('toNow', toNow);
     tiny.filter('unassignedDrivers', unassignedDrivers);
 
     function fromNow() {
         return function(dateFrom) {
             return moment(dateFrom).fromNow();
+        };
+    }
+
+    function toNow() {
+        return function(dateFrom) {
+            return moment(dateFrom).toNow();
         };
     }
 

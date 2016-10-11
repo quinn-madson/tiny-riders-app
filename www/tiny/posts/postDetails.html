@@ -1,0 +1,9 @@
+<ion-view title="Details">
+    <ion-content class="padding">
+        <div>
+            <h3>{{post.title}}</h3>
+            <h4>{{post.date | toNow}} by {{post.author.name}}</h4>
+            <p style="white-space: pre-line" ng-bind-html="post.content"></p>
+        </div>
+    </ion-content>
+</ion-view>
