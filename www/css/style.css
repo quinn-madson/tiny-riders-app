@@ -55,19 +55,19 @@
     font-size: 24px;
 }
 
-.item-icon-right item-text-wrap col item {
+.list .item.item-icon-right item-text-wrap col item {
 	padding-left: 15px;
 }
 
-.title ng-binding {
+.list .item.title ng-binding {
 	font-weight: 800;
 }
 
-.location ng-binding {
+.list .item.location ng-binding {
 	font-size: 85%;
 }
 
-.date ng-binding {
+.list .item.date ng-binding {
 	text-transform: uppercase;
 	font-size: 70%;
 	margin-top: 5px;
