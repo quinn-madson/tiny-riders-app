@@ -55,23 +55,43 @@
     font-size: 24px;
 }
 
-.list .item.item-icon-right item-text-wrap col item {
+
+/* HEADER */
+.bar .bar-header {
+	
+}
+
+
+
+/* TABS */
+
+
+
+
+/* SCHEDULE */
+
+.list .item.item-icon-right.item-text-wrap.col.item {
 	padding-left: 15px;
 }
 
-.list .item.title ng-binding {
+.list .item.item-icon-right.item-text-wrap.col.item .title.ng-binding {
 	font-weight: 800;
+	margin-top: 5px;
+	color: #C45441;
+	font-size: 90%;
 }
 
-.list .item.location ng-binding {
-	font-size: 85%;
-}
-
-.list .item.date ng-binding {
+.list .item.item-icon-right.item-text-wrap.col.item .date.ng-binding {
 	text-transform: uppercase;
 	font-size: 70%;
-	margin-top: 5px;
+	color: #999;
 }
 
+.list .item.item-icon-right.item-text-wrap.col.item .location.ng-binding {
+	font-size: 85%;
+	margin-top:3px;
+}
 
-
+.nav-view .view-container .view.pane .content.scroll-content.ionic-scroll.has-header .scroll .button-bar {
+	color: #C45441;
+}
