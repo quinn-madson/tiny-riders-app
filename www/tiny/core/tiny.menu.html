@@ -11,41 +11,55 @@
         <ion-nav-view name="menuContent"></ion-nav-view>
     </ion-side-menu-content>
     <ion-side-menu side="left">
+<!--
         <ion-header-bar class="bar-dark">
             <h1 class="title">Tiny Riders</h1>
         </ion-header-bar>
+-->
         <ion-content>
             <ion-list>
-                <ion-item menu-close href="#/app/schedule" class="item-balanced">
+                <ion-item menu-close href="#/app/index" class="item-light">
+                    Home
+                </ion-item>
+                <ion-item menu-close href="#/app/schedule" class="item-light">
                     Schedule
                 </ion-item>
-                <ion-item menu-close href="#/app/posts" class="item-balanced">
+                <ion-item class="item-light" ng-click="toggleGroup('schedule-10')" ng-class="{active: isGroupShown('schedule-10')}">
+                    <i class="icon" ng-class="isGroupShown('schedule-10') ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Standings
+                </ion-item>
+                <ion-item menu-close href="#" class="item-accordion item-stable" ng-show="isGroupShown('schedule-10')">
+                    Overall
+                </ion-item>
+                <ion-item menu-close href="#/app/gt/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ" class="item-accordion item-stable" ng-show="isGroupShown('schedule-10')">
+                    GT
+                </ion-item>
+                <ion-item menu-close href="#/app/lmp/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ" class="item-accordion item-stable" ng-show="isGroupShown('schedule-10')">
+                    LMP
+                </ion-item>
+                <ion-item menu-close href="#/app/club/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ/Carrera%201&#58;24" class="item-accordion item-stable" ng-show="isGroupShown('schedule-10')">
+                    LRG
+                </ion-item>
+                <ion-item menu-close href="#/app/riders" class="item-light">
+                    Riders
+                </ion-item>
+                <ion-item menu-close href="#/app/posts" class="item-light">
                     Posts
                 </ion-item>
-                <ion-item class="item-balanced" ng-click="toggleGroup('schedule-10')" ng-class="{active: isGroupShown('schedule-10')}">
-                    <i class="icon" ng-class="isGroupShown('schedule-10') ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Season 10 Standings
-                </ion-item>
-                <ion-item menu-close href="#/app/lmp/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ" class="item-accordion item-assertive" ng-show="isGroupShown('schedule-10')">
-                    LMP
-                </ion-item>
-                <ion-item menu-close href="#/app/gt/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ" class="item-accordion item-energized" ng-show="isGroupShown('schedule-10')">
-                    GT
-                </ion-item>
-                <ion-item menu-close href="#/app/club/1WNw4O593AOqsMrCMVct6KtiXU0CkWdKlEruZqTWp1nQ/Carrera%201&#58;24" class="item-accordion item-balanced" ng-show="isGroupShown('schedule-10')">
-                    Carrera 1:24
-                </ion-item>
 
-                <ion-item class="item-balanced" ng-click="toggleGroup('schedule-9')" ng-class="{active: isGroupShown('schedule-9')}">
+                <ion-item class="item-light" ng-click="toggleGroup('schedule-9')" ng-class="{active: isGroupShown('schedule-9')}">
                     <i class="icon" ng-class="isGroupShown('schedule-9') ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Season 9 Results
                 </ion-item>
-                <ion-item menu-close href="#/app/lmp/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8" class="item-accordion item-assertive" ng-show="isGroupShown('schedule-9')">
-                    LMP
+                <ion-item menu-close href="#/app/club/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8/Club%20Cars" class="item-accordion item-stable" ng-show="isGroupShown('schedule-9')">
+                    Overall
                 </ion-item>
-                <ion-item menu-close href="#/app/gt/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8" class="item-accordion item-energized" ng-show="isGroupShown('schedule-9')">
+                <ion-item menu-close href="#/app/club/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8/Club%20Cars" class="item-accordion item-stable" ng-show="isGroupShown('schedule-9')">
+                    Club Cars
+                </ion-item>
+                <ion-item menu-close href="#/app/gt/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8" class="item-accordion item-stable" ng-show="isGroupShown('schedule-9')">
                     GT
                 </ion-item>
-                <ion-item menu-close href="#/app/club/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8/Club%20Cars" class="item-accordion item-balanced" ng-show="isGroupShown('schedule-9')">
-                    Club Cars
+                <ion-item menu-close href="#/app/lmp/1SXLKZenMLZfvzj7MdKMj2FnkzSL4Sanbczk_trpLG-8" class="item-accordion item-stable" ng-show="isGroupShown('schedule-9')">
+                    LMP
                 </ion-item>
             </ion-list>
         </ion-content>

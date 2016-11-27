@@ -12,6 +12,15 @@
                 templateUrl: 'tiny/core/tiny.menu.html',
                 controller: 'tinyMenuController'
             })
+            .state('app.riders', {
+                url: '/riders',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'tiny/riders/riders.html',
+                        controller: 'RidersController'
+                    }
+                }
+            })
             .state('app.schedule', {
                 url: '/schedule',
                 views: {

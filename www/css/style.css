@@ -1,3 +1,12 @@
+h1, h2, h3, p {
+	padding: 0px 15px 0px 15px;
+}
+
+h3 {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}	
+	
 .centerfont {
     display: -webkit-box;
     display: -moz-box;
@@ -62,9 +71,35 @@
 }
 
 
+/* NAV */
+.item-complex, a.item.item-complex, button.item.item-complex {
+	padding-left: 25px;
+}
+.item.item-light, .item-complex, a.item.item-complex, button.item.item-complex a, .item-complex.item-stable > .item-content a {
+	font-size: 15px;
+}
+.item-complex.item-stable > .item-content {
+	padding-left: 0;
+}
+
+
 
 /* TABS */
+.button-bar {
+}
 
+.tabs-striped a.tab-item {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+/* RIDERS */
+
+.list.card .item p {
+	font-size: 70%;
+}
 
 
 
@@ -76,7 +111,7 @@
 
 .list .item.item-icon-right.item-text-wrap.col.item .title.ng-binding {
 	font-weight: 800;
-	margin-top: 5px;
+	pagging-top: 5px;
 	color: #C45441;
 	font-size: 90%;
 }
@@ -95,3 +130,4 @@
 .nav-view .view-container .view.pane .content.scroll-content.ionic-scroll.has-header .scroll .button-bar {
 	color: #C45441;
 }
+
