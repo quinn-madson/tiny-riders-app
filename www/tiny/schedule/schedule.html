@@ -1,11 +1,12 @@
 <ion-view title="Season 10 Schedule">
     <ion-content>
-  <div class="tabs-striped tabs-top tabs-background-dark tabs-color-light tabs-icon-left">
+    
+  <div class="tabs-striped tabs-top tabs-background-dark tabs-color-light">
     <div class="tabs">
-      <a class="tab-item" ng-click="setMode('future')"> <i class="icon"></i> Upcoming</a>         
-      
-            <a class="tab-item" ng-click="setMode('past')">Past</a>
-        </div>
+      	<a class="tab-item" ng-click="setMode('future')">Upcoming</a>         
+		<a class="tab-item" ng-click="setMode('past')">Past</a>
+    </div>
+  </div>	    
         <ion-list>
             <ion-item class="item-icon-right item-text-wrap col" ng-repeat="event in events" ng-click="nav(event)">
                 <div class="title">{{event.summary}}</div>

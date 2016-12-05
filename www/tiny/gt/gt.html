@@ -1,17 +1,16 @@
-<ion-view view-title="GT">
+<ion-view view-title="GT Standings">
     <ion-content ng-class="{poof: hideChart}">
-      	<highchart config="chartPie" class="Chartcenter"></highchart>
-    </ion-content>
-    <ion-content>
-    	<h1>GT Standings</h1>
-    	<div class="list">
+    	<h3>GT Standings</h3>
+    	<div class="">
 		  <label class="item item-input item-select">
 		    <select>
 		      <option selected>Current Season</option>
-		      <option>Season 10</option>
 		      <option>Season 9</option>
 		    </select>
 		  </label>
 		</div>
+      	<highchart config="chartPie" class="Chartcenter"></highchart>
+    </ion-content>
+    <ion-content>
     </ion-content>
 </ion-view>

@@ -1,10 +1,10 @@
-h1, h2, h3, p {
+h1, h2, h3, h4, h5, p {
 	padding: 0px 15px 0px 15px;
 }
 
 h3 {
 	padding-top: 10px;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 }	
 	
 .centerfont {
@@ -67,9 +67,13 @@ h3 {
 
 /* HEADER */
 .bar .bar-header {
-	
 }
 
+.title.title-left.header-item {
+	text-transform: uppercase;
+	font-size: 12px; 
+	left: 30px;
+}
 
 /* NAV */
 .item-complex, a.item.item-complex, button.item.item-complex {
@@ -103,7 +107,7 @@ h3 {
 
 
 
-/* SCHEDULE */
+/* RACE SCHEDULE */
 
 .list .item.item-icon-right.item-text-wrap.col.item {
 	padding-left: 15px;
@@ -111,7 +115,7 @@ h3 {
 
 .list .item.item-icon-right.item-text-wrap.col.item .title.ng-binding {
 	font-weight: 800;
-	pagging-top: 5px;
+	padding-top: 5px;
 	color: #C45441;
 	font-size: 90%;
 }
@@ -131,3 +135,21 @@ h3 {
 	color: #C45441;
 }
 
+
+/* RACE DETAILS */
+.race-details h3 {
+	color: #444;
+	padding-bottom: 0;
+}
+.race-details h4 {
+	color: #444;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.race-details h5 {
+	color: #444;
+	margin-bottom: 20px;
+}
+.race-details p {
+	margin-top: 40px;
+}

@@ -1,9 +1,10 @@
-<ion-view title="Details">
-    <ion-content class="padding">
+<ion-view title="Race Details">
+    <ion-content class="padding race-details">
         <div>
-            <h3>{{event.summary}}</3>
+            <h3>{{event.summary}}</h3>
             <h4>{{event.start.dateTime | fromNow}}</h4>
-            <h5>{{event.location}}</h5>
+            <h5><i class="icon ion-location"></i> {{event.location}}</h5>
+            <hr>
             <p style="white-space: pre-line">{{event.description}}</p>
         </div>
     </ion-content>
